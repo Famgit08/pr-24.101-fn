@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnowPeak - Горнолыжный курорт</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Шапка -->
+    <header class="bg-white shadow-lg">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl">⛷️</span>
+                <span class="text-xl font-bold text-blue-800">SnowPeak</span>
+            </div>
+            <div class="space-x-6">
+                <a href="index.html" class="text-blue-800 font-medium">Главная</a>
+                <a href="pages/register.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Регистрация</a>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Герой-секция с картинкой -->
+    <section class="bg-cover bg-center bg-no-repeat py-20 relative" 
+             style="background-image: url('images/ФонГорнолыжныйКурорт.jpg')">
+        <!-- Затемнение для лучшей читаемости текста -->
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-5xl font-bold mb-6 text-white">Добро пожаловать в SnowPeak</h1>
+            <p class="text-xl mb-8 text-white">Лучший горнолыжный курорт для вашего отдыха</p>
+            <a href="pages/register.html" class="bg-white text-blue-800 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 inline-block">
+                Начать отдых
+            </a>
+        </div>
+    </section>
+
+    <!-- Услуги с иконками -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Наши услуги</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Прокат снаряжения -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="images/ИконкаЛыжи.svg" 
+                         alt="Прокат лыж" 
+                         class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Прокат снаряжения</h3>
+                    <p class="text-gray-600">Лыжи, сноуборды, ботинки и защита</p>
+                </div>
+                
+                <!-- Обучение -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="images/ТренерИконка.png" 
+                         alt="Инструктор" 
+                         class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Обучение</h3>
+                    <p class="text-gray-600">Инструкторы для любого уровня</p>
+                </div>
+                
+                <!-- Проживание -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="images/ИконкаОтель.svg" 
+                         alt="Отель" 
+                         class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Проживание</h3>
+                    <p class="text-gray-600">Комфортные отели и шале</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 SnowPeak. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
