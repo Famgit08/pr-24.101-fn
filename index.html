@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SnowPeak - Горнолыжный курорт</title>
-        <!-- Подключаем наш скрипт темы -->
-    <script src="../js/theme.js"></script>
-</body>
-</html>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
     <!-- Шапка -->
-    <header class="bg-white shadow-lg">
+    <header class="bg-white dark:bg-gray-800 shadow-lg">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <span class="text-2xl">⛷️</span>
-                <span class="text-xl font-bold text-blue-800">SnowPeak</span>
+                <span class="text-xl font-bold text-blue-800 dark:text-blue-400">SnowPeak</span>
             </div>
-            <div class="space-x-6">
-                <a href="index.html" class="text-blue-800 font-medium">Главная</a>
+            <div class="flex items-center space-x-6">
+                <a href="index.html" class="text-blue-800 dark:text-blue-400 font-medium">Главная</a>
                 <a href="pages/register.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Регистрация</a>
+                <!-- Кнопка переключения темы -->
+                <button id="themeToggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white">
+                    🌙
+                </button>
             </div>
         </nav>
     </header>
@@ -42,43 +48,46 @@
     <!-- Услуги с иконками -->
     <section class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Наши услуги</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Наши услуги</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Прокат снаряжения -->
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center">
                     <img src="images/ИконкаЛыжи.svg" 
                          alt="Прокат лыж" 
                          class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2">Прокат снаряжения</h3>
-                    <p class="text-gray-600">Лыжи, сноуборды, ботинки и защита</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Прокат снаряжения</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Лыжи, сноуборды, ботинки и защита</p>
                 </div>
                 
                 <!-- Обучение -->
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center">
                     <img src="images/ТренерИконка.png" 
                          alt="Инструктор" 
                          class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2">Обучение</h3>
-                    <p class="text-gray-600">Инструкторы для любого уровня</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Обучение</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Инструкторы для любого уровня</p>
                 </div>
                 
                 <!-- Проживание -->
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center">
                     <img src="images/ИконкаОтель.svg" 
                          alt="Отель" 
                          class="w-16 h-16 mx-auto mb-4">
-                    <h3 class="text-xl font-bold mb-2">Проживание</h3>
-                    <p class="text-gray-600">Комфортные отели и шале</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Проживание</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Комфортные отели и шале</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Футер -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; 2025 SnowPeak. Все права защищены.</p>
         </div>
     </footer>
+
+    <!-- Подключаем наш скрипт темы -->
+    <script src="js/theme.js"></script>
 </body>
 </html>
