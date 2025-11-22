@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - SnowPeak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <header class="bg-white dark:bg-gray-800 shadow-lg">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center space-x-2">
+                <span class="text-2xl">⛷️</span>
+                <span class="text-xl font-bold text-blue-800 dark:text-blue-400">SnowPeak</span>
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="text-blue-800 dark:text-blue-400 font-medium">Вход</a>
+                <button id="themeToggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white">
+                    🌙
+                </button>
+            </div>
+        </nav>
+    </header>
 
+    <main class="min-h-screen flex items-center justify-center py-12 px-4">
+        <div class="max-w-md w-full space-y-8">
+            <div class="text-center">
+                <div class="mx-auto h-16 w-16 bg-blue-600 rounded-full flex items-center justify-center">
+                    <span class="text-white text-2xl font-bold">👤</span>
+                </div>
+                <h2 class="mt-6 text-3xl font-bold text-gray-900 dark:text-white">Регистрация</h2>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Создайте аккаунт для бронирования</p>
+            </div>
+
+            <form class="mt-8 space-y-6 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+                <div class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Имя</label>
+                            <input id="firstName" name="firstName" type="text" required 
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Фамилия</label>
+                            <input id="lastName" name="lastName" type="text" required 
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+                        <input id="email" name="email" type="email" required 
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                            placeholder="ivan@example.com">
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Пароль</label>
+                        <input id="password" name="password" type="password" required 
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                            placeholder="••••••••">
+                    </div>
+
+                    <div class="flex items-center">
+                        <input id="agreement" name="agreement" type="checkbox" required
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700">
+                        <label for="agreement" class="ml-2 block text-sm text-gray-700 dark:text-gray-300">
+                            Я принимаю условия использования
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit"
+                        class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200 dark:focus:ring-offset-gray-800">
+                        Зарегистрироваться
+                    </button>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Уже есть аккаунт?
+                        <a href="login.html" class="font-medium text-blue-600 dark:text-blue-400 hover:underline">Войти</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../js/theme.js"></script>
+</body>
+</html>
