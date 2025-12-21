@@ -524,12 +524,12 @@
             console.log('Cart total updated');
         }
         
-        // Disable demo links
-        document.querySelectorAll('a[href="/pr-24.101-fn/"]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-            });
-        });
+        // ВАЖНО: ЭТОТ КОД БЛОКИРУЕТ ССЫЛКИ - НЕ ИСПОЛЬЗУЙТЕ ЕГО!
+        // document.querySelectorAll('a[href="/pr-24.101-fn/"]').forEach(link => {
+        //     link.addEventListener('click', function(e) {
+        //         e.preventDefault();
+        //     });
+        // });
     </script>
 </body>
 </html>
